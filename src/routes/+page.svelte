@@ -5,19 +5,19 @@
 
 <div class="mx-5 flex justify-center items-center flex-col gap-5">
   <div class="group
-      sm:flex sm:items-center sm:flex-col 
+      sm:flex sm:items-center sm:flex-col sm:gap-1
       transition-shadow duration-150 
-      mx-auto max-w-2xl p-5 shadow-md rounded-xl mt-10
+      p-7 shadow-md rounded-xl mt-10 bg-white
     ">
-    <img class="group-hover:-translate-y-3 delay-75 transition-all duration-300 h-36 block mb-5" src="{logo}" alt="Logo Icon" />
-    <div class="sm:text-left">
-      <h3>
-        A [||||||||||||||||||] resource website for 
+    <img class="group-hover:-translate-y-3 group-hover:-translate-x-1 group-hover:-rotate-3 delay-75 ease-out transition-all duration-300 h-36 block mb-5" src="{logo}" alt="Logo Icon" />
+    <div>
+      <h3 class=" py-3">
+        A Grade 12 resource website for 
           <span class="group-hover:text-yellow-400 transition-all duration-300">
-            [|||||||] students.
+            USTL students.
           </span>
       </h3>
-      <p>Made by alice-.</p>
+      <p>Made by <span class="group-hover:text-yellow-700 transition-colors duration-200">alice-.</span></p>
       <div class="p-2 text-xs text-slate-400">
         <p>Technologies to use:</p>
         <p>Frontend: SvelteKit, TailwindCSS, and HTML, CSS, JS. ;)</p>
@@ -28,6 +28,6 @@
   </div>
 
   <div class="mt-5">
-    <a href="{base}/subjects" class="px-20 p-5 border border-blue-200 hover:border-blue-500 transition-colors duration-150 shadow-md rounded-md">View Subjects</a>
+    <a href="{base}/subjects" class="px-20 p-5 border bg-white border-blue-200 hover:border-blue-500 transition-colors duration-300 shadow-md rounded-md">View Subjects</a>
   </div>
 </div>
