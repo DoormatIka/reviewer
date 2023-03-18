@@ -8,7 +8,7 @@ module.exports = {
         "quart": ["Quart", "sans-serif"]
       },
       transitionTimingFunction: {
-        
+        "snap": "cubic-bezier(.3,.82,0,1.5)"
       }
     },
   },

@@ -9,12 +9,15 @@
       transition-shadow duration-150 
       p-7 shadow-md rounded-xl mt-10 bg-white
     ">
-    <img class="group-hover:-translate-y-3 group-hover:-translate-x-1 group-hover:-rotate-3 delay-75 ease-out transition-all duration-300 h-36 block mb-5" src="{logo}" alt="Logo Icon" />
+    <img class="group-hover:-translate-y-3 group-hover:-translate-x-1 group-hover:-rotate-3 delay-75 transition-all duration-300 h-36 block mb-5 ease-snap" src="{logo}" alt="Logo Icon" />
     <div>
-      <h3 class=" py-3">
+      <h3 class="py-3">
         A Grade 12 resource website for 
-          <span class="group-hover:text-yellow-400 transition-all duration-300">
-            USTL students.
+          <span class="group-hover:text-yellow-400 inline-block group-hover:rotate-3 group-hover:translate-x-1 transition-all duration-300 ease-snap">
+            USTL
+          </span>
+          <span class="group-hover:text-yellow-400 inline-block group-hover:-rotate-6 group-hover:translate-x-2 transition-all duration-300 ease-snap">
+            students.
           </span>
       </h3>
       <p>Made by <span class="group-hover:text-yellow-700 transition-colors duration-200">alice-.</span></p>

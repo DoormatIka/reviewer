@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @font-face {
   font-family: "Quart";
-  src: url("./Quart-Regular.ttf")
+  src: url("/assets/Quart-Regular.ttf")
 }
 
 @tailwind base;
@@ -21,7 +21,7 @@ p {
 }
 
 h1 {
-  @apply font-quart text-5xl font-light
+  @apply font-quart text-4xl font-light
 }
 h2 {
   @apply font-quart text-3xl font-light
@@ -38,5 +38,5 @@ button {
 }
 
 a {
-  @apply font-rubik
+  @apply font-rubik text-blue-700
 }
