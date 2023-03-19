@@ -1,0 +1,1 @@
+import{p as e}from"./data.b2415e89.js";function o({}){return{subjects:e}}const r=Object.freeze(Object.defineProperty({__proto__:null,load:o},Symbol.toStringTag,{value:"Module"}));export{r as _,o as l};
