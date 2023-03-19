@@ -21,6 +21,16 @@ const config = {
     }),
     paths: {
       base: ""
+    },
+    csp: {
+      mode: "auto",
+      directives: {
+        "script-src": ["self"],
+        "font-src": ["self", "https://fonts.gstatic.com"],
+        "style-src": ["self", "https://fonts.googleapis.com"],
+        "img-src": ["self", "media.discordapp.net"],
+        "default-src": ["self"]
+      },
     }
 	}
 };

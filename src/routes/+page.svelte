@@ -12,10 +12,10 @@
     <div>
       <h3 class="py-3">
         A Grade 12 resource website for 
-          <span class="group-hover:text-yellow-400 inline-block group-hover:rotate-3 group-hover:translate-x-1 transition-all duration-300 ease-snap">
-            USTL
+          <span class="group-hover:text-yellow-400 inline-block group-hover:rotate-3 group-hover:translate-x-1 transition-all duration-200 ease-snap">
+            UST
           </span>
-          <span class="group-hover:text-yellow-400 inline-block group-hover:-rotate-6 group-hover:translate-x-2 transition-all duration-300 ease-snap">
+          <span class="group-hover:text-yellow-400 inline-block group-hover:-rotate-6 group-hover:translate-x-2 transition-all duration-200 ease-snap">
             students.
           </span>
       </h3>
@@ -30,6 +30,19 @@
   </div>
 
   <div class="mt-5">
-    <a href="{base}/subjects" class="px-20 p-5 border bg-white border-blue-200 hover:border-blue-500 transition-colors duration-300 shadow-md rounded-md">View Subjects</a>
+    <a 
+      href="{base}/subjects" 
+      class="px-20 p-5 border 
+        bg-white border-blue-200 hover:border-blue-500 
+        transition-colors duration-300 shadow-md rounded-md
+        group
+      ">
+        <span class="inline-block group-hover:tracking-widest group-hover:-translate-x-1 transition-all ease-snap">
+          View
+        </span>
+        <span class="inline-block group-hover:tracking-widest group-hover:translate-x-3 transition-all ease-snap">
+          Subjects
+        </span>
+    </a>
   </div>
 </div>

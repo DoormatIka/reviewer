@@ -17,7 +17,7 @@ export const posts = [
     link: "chem1",
     topics: [
       { topic: "explosives.", description: "explosion." },
-      { topic: "the heavy is dead!", description: `${Math.random()} aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa` },
+      { topic: "the heavy is dead!", description: `${Math.random()} \nChild hood whatevers.` },
       { topic: "the heavy is dead!", description: `${Math.random()}` },
       { topic: "the heavy is dead!", description: `${Math.random()}` },
       { topic: "the heavy is dead!", description: `${Math.random()}` },

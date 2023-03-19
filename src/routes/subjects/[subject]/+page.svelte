@@ -3,7 +3,7 @@
   export let data;
 
   import Card from "$lib/Card.svelte";
-  const logo = "https://media.discordapp.net/attachments/1061320413373808741/1085617532804812970/favicon.png?width=560&height=560";
+  const logo = "https://media.discordapp.net/attachments/759258063789096973/1085893022534864967/IMG_20230316_194326.jpg?width=507&height=675";
 </script>
 
 <p>{data.post?.description}</p>
