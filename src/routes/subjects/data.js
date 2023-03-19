@@ -18,6 +18,17 @@ export const posts = [
     topics: [
       { topic: "explosives.", description: "explosion." },
       { topic: "the heavy is dead!", description: `${Math.random()}` },
+      { topic: "the heavy is dead!", description: `${Math.random()}` },
+      { topic: "the heavy is dead!", description: `${Math.random()}` },
+      { topic: "the heavy is dead!", description: `${Math.random()}` },
+      { topic: "the heavy is dead!", description: `${Math.random()}` },
+      { topic: "the heavy is dead!", description: `${Math.random()}` },
+      { topic: "the heavy is dead!", description: `${Math.random()}` },
+      { topic: "the heavy is dead!", description: `${Math.random()}` },
+      { topic: "the heavy is dead!", description: `${Math.random()}` },
+      { topic: "the heavy is dead!", description: `${Math.random()}` },
+      { topic: "the heavy is dead!", description: `${Math.random()}` },
+      { topic: "the heavy is dead!", description: `${Math.random()}` },
     ],
   },
   {

@@ -6,8 +6,7 @@
 <div class="mx-5 flex justify-center items-center flex-col gap-5">
   <div class="group
       sm:flex sm:items-center sm:flex-col sm:gap-1
-      transition-shadow duration-150 
-      p-7 shadow-md rounded-xl mt-10 bg-white
+      duration-150 p-7 shadow-md rounded-xl mt-10 bg-white
     ">
     <img class="group-hover:-translate-y-3 group-hover:-translate-x-1 group-hover:-rotate-3 delay-75 transition-all duration-300 h-36 block mb-5 ease-snap" src="{logo}" alt="Logo Icon" />
     <div>
