@@ -1,6 +1,8 @@
 <script>
   import { base } from "$app/paths";
   const logo = "https://media.discordapp.net/attachments/1061320413373808741/1085617532804812970/favicon.png?width=560&height=560";
+
+  export let data;
 </script>
 
 <div class="mx-5 flex justify-center items-center flex-col gap-5">
@@ -19,6 +21,7 @@
             students.
           </span>
       </h3>
+
       <p>Made by <span class="group-hover:text-yellow-700 transition-colors duration-200">alice-.</span></p>
       <div class="p-2 text-xs text-slate-400">
         <p>Technologies to use:</p>
@@ -44,5 +47,18 @@
           Subjects
         </span>
     </a>
+  </div>
+  <div class="mt-5 text-center">
+    {#if data.profile}
+      <p>Logged in as: {data.profile.username}</p>
+      <form action="/logout" method="post">
+        <button class=" text-blue-500">Logout</button>
+      </form>
+    {:else}
+      <p>Logged out.</p>
+      <a href="{base}/login">
+        Admin Login
+      </a>
+    {/if}
   </div>
 </div>

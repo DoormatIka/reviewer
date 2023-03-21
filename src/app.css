@@ -33,7 +33,7 @@ h4 {
   @apply font-rubik text-2xl font-semibold
 }
 
-button {
+.main-button {
   @apply p-5 border border-blue-200 hover:border-blue-500 transition-colors duration-150 shadow-md rounded-md
 }
 
