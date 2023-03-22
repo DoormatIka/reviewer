@@ -27,7 +27,7 @@ const config = {
       directives: {
         "font-src": ["self", "https://fonts.gstatic.com"],
         "style-src": ["self", "https://fonts.googleapis.com"],
-        "img-src": ["self", "media.discordapp.net"],
+        "img-src": ["self", "media.discordapp.net", "http://127.0.0.1:8090/"],
         "default-src": ["self"]
       },
     }

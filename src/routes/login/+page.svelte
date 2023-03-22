@@ -1,5 +1,4 @@
 <script>
-  import { error } from "@sveltejs/kit";
   export let form;
 </script>
 

@@ -1,22 +1,41 @@
 
+/** @type {import("@sveltejs/kit").ServerLoad} */
 export async function load({ locals }) {
   const list = await locals.pb
     .collection("subjects")
     .getList();
   
-  console.log(list.items);
-
-  // somehow identify the subject link from this
-  // and take it to the route params load function
-  // so it can be used to get the topics associated with that subj
   return {
     subjects: list.items.map(v => {
+      const url = locals.pb.getFileUrl(v, v.thumbnail);
+      
       return {
         subject: v.name,
         description: v.description,
         tag: v.tag,
+        imageLink: url,
         link: v.id
       }
     })
+  }
+}
+
+/** @type {import("@sveltejs/kit").Actions} */
+export const actions = {
+  default: async ({ request, locals }) => {
+    try {
+      await locals.pb
+        .collection("subjects")
+        .create({
+          name: "aaaawwwwwwwww",
+          description: "wwwwwwwwwwwwwwwww",
+          tag: "Science",
+          link: "asdaf"
+        })
+    } catch (err) {
+      return {
+        message: "Have you logged in?"
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
 import { redirect } from "@sveltejs/kit"
 
 // if the user is already logged in, redirect them back.
+/** @type {import("@sveltejs/kit").ServerLoad} */
 export function load({ locals }) {
   if (locals.pb.authStore.isValid) {
     throw redirect(303, "/");
@@ -21,11 +22,10 @@ export const actions = {
         .collection("users")
         .authWithPassword(email.toString(), pw.toString())
       
-    } catch (err) {
+    } catch (/** @type any */ err) {
       // passing the value back to the form
-      
       /** @type { { originalError: { cause: { errno: number, code: string } } } } */
-      const typederr = JSON.parse(JSON.stringify(err));
+      const typederr = err;
 
       return {
         error: true,
