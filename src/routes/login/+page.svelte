@@ -2,25 +2,29 @@
   export let form;
 </script>
 
-<div class="mx-5 h-screen w-screen flex justify-center">
-  <form method="post" action="?/login" class="flex flex-col gap-3 items-center justify-center flex-grow">
-    <div class="group p-10 shadow-md rounded-xl bg-white flex-wrap">
-      <div class="flex break-words justify-center items-center flex-col gap-4">
+<div class="mx-5 h-screen w-screen flex flex-col justify-center items-center">
+  <div class="p-10 shadow-md rounded-xl bg-white text-center">
+    <div class="break-words gap-4 m-3">
+      <form method="post" action="?/login" class="flex flex-col gap-3 items-center justify-center">
         <h2 class="p-5">Admin Login</h2>
         <label>
           Email
-          <input name="email" type="email" required>
+          <input name="email" type="email" value={form?.email ?? ""}>
         </label>
         <label>
           Password
-          <input name="password" type="password" required>
+          <input name="password" type="password" value={form?.pw ?? ""}>
         </label>
         <button>Log in</button>
         {#if form?.error}
-          <p>{form?.code}</p>
+          <p class=" text-red-500">{form?.error}</p>
         {/if}
-      </div>
+      </form>
     </div>
-      
-  </form>
+
+    <p>Why have this?</p>
+    <div class="text-xs text-slate-400">
+      <p>For the admins to have an easier time to modify the internals of the website.</p>
+    </div>
+  </div>
 </div>

@@ -31,8 +31,11 @@
       <h4 class="leading-relaxed">{subject}</h4>
       <p class="mt-2 text-slate-600">{description}</p>
     </div>
-    <div class=" mt-2 text-lg">
+    <div class=" flex flex-col mt-2 text-lg">
       <a href="{base}/subjects/{link}">Enter</a>
+      <div class="mt-2">
+        <slot />
+      </div>
     </div>
   </div>
   

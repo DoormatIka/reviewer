@@ -1,4 +1,4 @@
-import { redirect } from "@sveltejs/kit"
+import { redirect, fail } from "@sveltejs/kit"
 
 // if the user is already logged in, redirect them back.
 /** @type {import("@sveltejs/kit").ServerLoad} */
@@ -14,24 +14,29 @@ export const actions = {
     const form = await request.formData();
     const email = form.get("email");
     const pw = form.get("password");
-    // console.log(email, pw)
-    if (!email || !pw) return { error: true, reason: "Did you type in your email and password?" }
 
-    try {
-      const { token, record } = await locals.pb
-        .collection("users")
-        .authWithPassword(email.toString(), pw.toString())
+    try { // server-side validation
+      if (email && pw) {
+        const { token, record } = await locals.pb
+          .collection("users")
+          .authWithPassword(email.toString(), pw.toString())
+      } else {
+        return fail(422, {
+          error: "Invalid inputs.",
+          email: email,
+          pw: pw,
+        })
+      }
       
     } catch (/** @type any */ err) {
-      // passing the value back to the form
-      /** @type { { originalError: { cause: { errno: number, code: string } } } } */
+      /** @type { { response: { code: number, message: String, data: any } } } */
       const typederr = err;
 
-      return {
-        error: true,
+      return fail(422, {
+        error: typederr.response.message,
         email: email,
-        code: typederr.originalError.cause.code
-      }
+        pw: pw,
+      })
     }
     throw redirect(303, "/")
   }
