@@ -21,7 +21,8 @@ export async function load({ params, locals }) {
       const url = locals.pb.getFileUrl(c, c.image);
       return {
         description: c.description,
-        image: url
+        image: url,
+        id: c.id
       }
     })
   }
@@ -53,6 +54,13 @@ export const actions = {
     }
   },
   remove: async ({ request, locals, params }) => {
+    const form = await request.formData();
+    const content_id = form.get("id")?.toString();
 
+    if (content_id) {
+      await locals.pb
+        .collection("contents")
+        .delete(content_id)
+    }
   }
 }

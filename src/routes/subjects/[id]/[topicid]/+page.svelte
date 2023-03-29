@@ -34,8 +34,15 @@ import SvelteMarkdown from "svelte-markdown"
     <!-- Description -->
     <div class="overflow-y-auto text-lg lg:text-base">
       {#if data.contents.length > 0}
-        {#each [data.contents[index]] as { description } (index)}
+        {#each [data.contents[index]] as { description, id } (index)}
           <SvelteMarkdown source={description}></SvelteMarkdown>
+
+          {#if data.isLoggedIn}
+            <form method="post" action="?/remove">
+              <input type="hidden" name="id" value={id} />
+              <button>Remove</button>
+            </form>
+          {/if}
         {/each}
       {/if}
       <div class="mt-3">
