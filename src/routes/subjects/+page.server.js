@@ -7,16 +7,16 @@ export async function load({ locals }) {
     .getList();
 
     return {
-    subjects: list.items.map(v => {
-      const url = locals.pb.getFileUrl(v, v.thumbnail);
-      
-      return {
-        subject: v.name,
-        description: v.description,
-        tag: v.tag,
-        imageLink: url,
-        id: v.id
-      }
+      subjects: list.items.map(v => {
+        const url = locals.pb.getFileUrl(v, v.thumbnail);
+        
+        return {
+          subject: v.name,
+          description: v.description,
+          tag: v.tag,
+          imageLink: url,
+          id: v.id
+        }
     })
   }
 }
@@ -26,52 +26,18 @@ export const actions = {
   add: async ({ request, locals }) => {
     const req = await request.formData();
 
-    const name = req.get("name");
-    const desc = req.get("desc");
-    const tag = req.get("tags");
-    const link = req.get("link");
-    const img = req.get("img");
-    console.dir(img, { depth: null })
     try {
-      if (desc && name) { // validation
-        let err = "";
-        if (desc.length < 5) {
-          err = "description"
-        }
-        if (name.length < 5) {
-          err = "name"
-        }
-        if (err.length > 0) {
-          return fail(422, {
-            error: `Invalid length of ${err}.`,
-            name: name,
-            desc: desc,
-            tag: tag,
-            link: link,
-          })
-        }
-      }
       await locals.pb
         .collection("subjects")
-        .create({
-          name: name,
-          description: desc,
-          tag: tag,
-          link: link,
-          thumbnail: img
-        })
+        .create(req)
       
       redirect(303, "/subjects")
     } catch (/** @type any */ err) {
-      /** @type {{ response: { message: string } }} */
+      /** @type {{ response: { message: string, data: any } }} */
       const typederr = err;
-      console.dir(err, { depth: null })
+      
       return fail(422, {
-        error: typederr.response.message,
-        name: name,
-        desc: desc,
-        tag: tag,
-        link: link,
+        error: `${typederr.response.message}: ${JSON.stringify(typederr.response.data)}`,
       })
     }
   },
@@ -80,10 +46,31 @@ export const actions = {
     const id = form.get("id")?.toString();
     
     if (id) {
-      await locals
-        .pb
+      const subj = await locals.pb
         .collection("subjects")
-        .delete(id);
+        .getOne(id)
+      
+      for (const field_id of subj.field) {
+        const field = await locals.pb
+          .collection("topics")
+          .getOne(field_id)
+        
+          // copied from +page.server.js [id]
+          // refractor, please.
+          for (const content_id of field.content) {
+            await locals.pb
+              .collection("contents")
+              .delete(content_id)
+          }
+    
+          await locals.pb
+            .collection("topics")
+            .delete(field_id);
+      }
+
+      await locals.pb
+        .collection("subjects")
+        .delete(id)
     }
   }
 }

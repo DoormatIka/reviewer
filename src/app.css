@@ -14,9 +14,6 @@ html {
 
 body {
   background-color: #f8f8f8;
-}
-
-p {
   @apply font-rubik
 }
 
@@ -43,4 +40,12 @@ button {
 
 a {
   @apply font-rubik text-blue-700
+}
+
+ul {
+  @apply list-disc list-inside
+}
+
+ol {
+  @apply list-decimal list-inside
 }

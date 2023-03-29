@@ -10,7 +10,7 @@ module.exports = {
       transitionTimingFunction: {
         "snap": "cubic-bezier(.3,.82,0,1.5)"
       }
-    },
+    }
   },
   plugins: [],
 }

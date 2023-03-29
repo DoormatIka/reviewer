@@ -1,6 +1,7 @@
 <script>
   import { base } from "$app/paths";
-  const logo = "https://media.discordapp.net/attachments/1061320413373808741/1085617532804812970/favicon.png?width=560&height=560";
+  const logo =
+    "https://media.discordapp.net/attachments/1061320413373808741/1085617532804812970/favicon.png?width=560&height=560";
   export let data;
 </script>
 
@@ -12,7 +13,7 @@
     "
   >
     <img
-      class="group-hover:-translate-y-3 group-hover:-translate-x-1 group-hover:-rotate-3 delay-75 transition-all duration-300 h-36 block mb-5 ease-snap"
+      class=" sm:h-36 group-hover:-translate-y-3 group-hover:-translate-x-1 group-hover:-rotate-3 delay-75 transition-all duration-300 h-48 block mb-5 ease-snap"
       src={logo}
       alt="Logo Icon"
     />
@@ -51,10 +52,10 @@
       <a
         href="{base}/subjects"
         class="px-20 p-5 border 
-          bg-white border-blue-200 hover:border-blue-500 
-          transition-colors duration-300 shadow-md rounded-md
-          group
-        "
+            bg-white border-blue-200 hover:border-blue-500 
+            transition-colors duration-300 shadow-md rounded-md
+            group
+          "
       >
         <span
           class="inline-block group-hover:tracking-widest group-hover:-translate-x-1 transition-all ease-snap"
@@ -70,7 +71,13 @@
     </div>
   {/if}
 
-  <div class="mt-5 shadow-md p-5 rounded-md">
+  <div class="mt-5">
+    <p class="text-center">Socials:</p>
+    <a href="https://twitter.com/LilynHana">Twitter</a>
+    <a href="https://www.facebook.com/simon.rito.7">Facebook</a>
+  </div>
+
+  <div class="mt-2 shadow-md p-5 rounded-md">
     {#if data.code === -1}
       <p class="text-red-600 text-center">{data.message}</p>
     {:else}

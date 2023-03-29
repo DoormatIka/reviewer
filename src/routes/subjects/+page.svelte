@@ -20,7 +20,6 @@
         imageLink={imageLink}
         link={id}
       >
-        <!-- Somehow pass the ID from this to the form method -->
         {#if data.isLoggedIn}
           <form method="post" action="?/remove">
             <input type="hidden" name="id" value={id} />
@@ -33,18 +32,18 @@
 
   {#if data.isLoggedIn}
     <div>
-      <form enctype="multipart/form-data" class="flex items-center flex-col gap-3 justify-between" method="post" action="?/add">
+      <form enctype="multipart/form-data" method="post" action="?/add" class="flex items-center flex-col gap-3 justify-between">
         <label>
           Name
-          <input value={form?.name ?? ""} name="name" class="border rounded-md border-slate-400 outline-none p-1" type="text" required />
+          <input name="name" class="border rounded-md border-slate-400 outline-none p-1" type="text" required />
         </label>
-        <label>
-          Description
-          <input value={form?.desc ?? ""} name="desc" class="border rounded-md border-slate-400 outline-none p-1" type="text" required />
+        <label class="text-center">
+          <p>Description</p>
+          <textarea name="description" cols="70" rows="5"></textarea>
         </label>
         <label>
           Tags
-          <select value={form?.tag ?? ""} name="tags" id="tags" required>
+          <select name="tag" id="tags" required>
             <option value="Math">Math</option>
             <option value="Science">Science</option>
             <option value="Language">Language</option>
@@ -53,11 +52,11 @@
         </label>
         <label>
           Link
-          <input value={form?.link ?? ""} name="link" class="border rounded-md border-slate-400 outline-none p-1" type="text" required />
+          <input name="link" class="border rounded-md border-slate-400 outline-none p-1" type="text" required />
         </label>
         <label>
           Image
-          <input type="file" name="img" accept="image/jpeg,image/png" required />
+          <input type="file" name="thumbnail" accept="image/jpeg,image/png" required />
         </label>
 
         <button type="submit">Add Subject</button>
