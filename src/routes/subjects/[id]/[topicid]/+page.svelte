@@ -22,7 +22,7 @@ import SvelteMarkdown from "svelte-markdown"
 
 <!-- Slideshow -->
 <div class="overflow-y-hidden flex min-h-screen flex-col lg:flex-row">
-  <div class=" overflow-y-hidden outline flex flex-auto lg:w-32 lg:h-auto p-3 justify-center flex-col lg:min-h-screen">
+  <div class=" overflow-y-hidden flex flex-auto lg:w-32 lg:h-auto p-3 justify-center flex-col lg:min-h-screen">
     <!-- Image part -->
     {#if data.contents.length > 0}
       {#each [data.contents[index]] as { image } (index)}
@@ -30,7 +30,7 @@ import SvelteMarkdown from "svelte-markdown"
       {/each}
     {/if}
   </div>
-  <div class="outline flex-1 p-3 text-justify flex flex-col justify-between max-h-screen">
+  <div class="flex-1 p-3 text-justify flex flex-col justify-between max-h-screen">
     <!-- Description -->
     <div class="overflow-y-auto text-lg lg:text-base">
       {#if data.contents.length > 0}
@@ -45,22 +45,22 @@ import SvelteMarkdown from "svelte-markdown"
           {/if}
         {/each}
       {/if}
-      <div class="mt-3">
-        {#if data.isLoggedIn}
-          <div class="bg-slate-200 mt-10 break-all">
-            <p class="mb-3">Preview:</p>
-            <SvelteMarkdown source={value}></SvelteMarkdown>
-          </div>
-          <form class="flex flex-col items-center" enctype="multipart/form-data" method="post" action="?/add">
-            <textarea name="description" cols="30" rows="10" bind:value={value} required></textarea>
-            <input type="file" name="image" accept="image/jpeg,image/png" required>
-            <button>Add new content</button>
-          </form>
-          {#if form?.error}
-            <p><span class="text-red-500">Error:</span> {form?.error}</p>
-          {/if}
+    </div>
+    <div class="mt-3">
+      {#if data.isLoggedIn}
+        <div class="bg-slate-200 mt-10 break-all overflow-y-auto max-h-96">
+          <p class="mb-3">Preview:</p>
+          <SvelteMarkdown source={value}></SvelteMarkdown>
+        </div>
+        <form class="flex flex-col items-center" enctype="multipart/form-data" method="post" action="?/add">
+          <textarea name="description" cols="30" rows="10" bind:value={value} required></textarea>
+          <input type="file" name="image" accept="image/jpeg,image/png" required>
+          <button>Add new content</button>
+        </form>
+        {#if form?.error}
+          <p><span class="text-red-500">Error:</span> {form?.error}</p>
         {/if}
-      </div>
+      {/if}
     </div>
     <div class="mt-2">
       <p transition:fade>Page {index + 1} of {data.contents.length}</p>        

@@ -34,15 +34,18 @@
 
       <p>
         Made by <span
-          class="group-hover:text-yellow-700 transition-colors duration-200"
-          >alice-.</span
-        >
+          class="group-hover:text-rose-400 transition-colors duration-200"
+          >
+          7 Colors Alice
+        </span>
       </p>
       <div class="p-2 text-xs text-slate-400">
-        <p>Technologies to use:</p>
+        <p class="mb-2">Technologies to use:</p>
         <p>Frontend: SvelteKit, TailwindCSS, and HTML, CSS, JS. ;)</p>
-        <p>Backend: Pocketbase (to store modules).</p>
-        <p>Hosting: DigitalOcean or Github Pages.</p>
+        <p>Backend: Pocketbase (Lightweight database)</p>
+        <p>Hosting Frontend: Netlify</p>
+        <p>Hosting Backend: Fly.io</p>
+        <p>Additional Tools: Docker (to make my code compatible with hosting services)</p>
       </div>
     </div>
   </div>
