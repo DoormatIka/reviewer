@@ -39,7 +39,7 @@
         </label>
         <label class="text-center">
           <p>Description</p>
-          <textarea name="description" cols="70" rows="5"></textarea>
+          <textarea name="description" cols="30" rows="5"></textarea>
         </label>
         <label>
           Tags
