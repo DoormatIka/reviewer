@@ -12,6 +12,7 @@ export async function handle({ event, resolve }) {
         event.locals.user = event.locals.pb.authStore.model
       }
     }
+    await event.locals.pb.collection('users').authRefresh()
   } catch (_) {
     event.locals.pb.authStore.clear();
   }
