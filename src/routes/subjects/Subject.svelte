@@ -20,7 +20,7 @@
   <div class="md:shrink-0 overflow-hidden">
     <img
       src={imageLink}
-      class="object-cover h-48 w-full md:object-center md:h-full md:w-48 scale-105 group-hover:scale-100 transition-transform duration-200 ease-out"
+      class="object-cover h-48 w-full md:object-center md:h-full md:w-48 scale-105 group-hover:scale-100 transition-all duration-200 ease-out"
       alt=""
     />
   </div>

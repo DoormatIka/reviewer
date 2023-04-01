@@ -9,7 +9,6 @@ export async function load({ locals }) {
     return {
       subjects: list.items.map(v => {
         const url = locals.pb.getFileUrl(v, v.thumbnail);
-        
         return {
           subject: v.name,
           description: v.description,
