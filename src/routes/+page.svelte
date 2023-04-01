@@ -85,7 +85,7 @@
     {:else}
       <p class="text-green-400 text-center">{data.message}</p>
       <div class="mt-5 text-center">
-        {#if data.profile}
+        {#if data.isLoggedIn}
           <p>Logged in as: {data.profile.username}</p>
           <form action="/logout" method="post">
             <button class=" text-blue-500">Logout</button>
