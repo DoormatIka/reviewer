@@ -16,7 +16,8 @@ export async function load({ locals }) {
           imageLink: url,
           id: v.id
         }
-    })
+    }),
+    isLoggedIn: locals.pb.authStore.isValid
   }
 }
 

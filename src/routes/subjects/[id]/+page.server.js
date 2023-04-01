@@ -15,7 +15,7 @@ export async function load({ params, locals }) {
     })
 
   if (!subj || !subj.expand.field) {
-    return { topics: [] }
+    return { topics: [], isLoggedIn: locals.pb.authStore.isValid }
   }
 
   return { 
@@ -28,7 +28,8 @@ export async function load({ params, locals }) {
         topic_id: c.id,
         subject_id: params.id
       }
-    }) 
+    }),
+    isLoggedIn: locals.pb.authStore.isValid,
   }
 }
 

@@ -13,7 +13,7 @@ export async function load({ params, locals }) {
     })
 
   if (!topic || !topic.expand.content) {
-    return { contents: [] }
+    return { contents: [], isLoggedIn: locals.pb.authStore.isValid }
   }
 
   return {
@@ -24,7 +24,8 @@ export async function load({ params, locals }) {
         image: url,
         id: c.id
       }
-    })
+    }),
+    isLoggedIn: locals.pb.authStore.isValid
   }
 }
 

@@ -6,12 +6,14 @@ export async function load({ locals }) {
     const hp = await locals.pb.health.check()
     return {
       code: hp.code,
-      message: hp.message
+      message: hp.message,
+      isLoggedIn: locals.pb.authStore.isValid
     }
   } catch (err) {
     return {
       code: -1,
-      message: "API is down."
+      message: "API is down.",
+      isLoggedIn: locals.pb.authStore.isValid
     }
   }
 }
