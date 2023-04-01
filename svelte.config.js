@@ -27,7 +27,7 @@ const config = {
         "font-src": ["self", "https://fonts.gstatic.com"],
         "style-src": ["self", "https://fonts.googleapis.com", "*"],
         "img-src": ["self", "media.discordapp.net", "https://reviewer-book.pockethost.io"],
-        "default-src": ["self"],
+        "default-src": ["self", "https://reviewer-book.pockethost.io"],
       },
     }
 	}
