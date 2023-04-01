@@ -31,14 +31,6 @@
           students.
         </span>
       </h3>
-
-      <p>
-        Made by <span
-          class="group-hover:text-rose-400 transition-colors duration-200"
-          >
-          7 Colors Alice
-        </span>
-      </p>
       <div class="p-2 text-xs text-slate-400">
         <p class="mb-2">Technologies to use:</p>
         <p>Frontend: SvelteKit, TailwindCSS, and HTML, CSS, JS. ;)</p>
@@ -73,10 +65,18 @@
     </div>
   {/if}
 
-  <div class="mt-5">
-    <p class="text-center">Socials:</p>
-    <a href="https://twitter.com/LilynHana">Twitter</a>
-    <a href="https://www.facebook.com/simon.rito.7">Facebook</a>
+  <div class="mt-5 flex items-center justify-between shadow-md gap-10 p-4 font-mono text-white bg-black">
+    <div class="w-40 h-40 relative before:absolute before:bg-teal-300 before:top-1 before:left-1 before:w-full before:h-full">
+      <img src="akyuu.jpg" alt="" class="w-full h-full absolute inset-0 z-10 object-cover" />
+    </div>
+    <div>
+      <p class="font-semibold text-2xl text-center tracking-wider p-3">Made by <span class="text-teal-400">Alice</span></p>
+    
+      <div class="flex flex-col items-center pl-5 pr-5 justify-center border border-slate-200 flex-1 h-28">
+        <p class="font-semibold">Socials:</p>
+        <a href="https://twitter.com/LilynHana" target="_blank" rel="noopener noreferrer" class="text-lime-300 font-mono">Twitter</a>
+      </div>
+    </div>
   </div>
 
   <div class="mt-2 shadow-md p-5 rounded-md">
