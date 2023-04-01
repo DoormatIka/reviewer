@@ -20,6 +20,6 @@ export async function handle({ event, resolve }) {
   
   // TODO: secure before deployment
   
-  response.headers.append("set-cookie", event.locals.pb.authStore.exportToCookie({ secure: true, maxAge: 86400, path: `${base}` }));
+  response.headers.append("set-cookie", event.locals.pb.authStore.exportToCookie({ secure: true, maxAge: 86400, path: `/` }));
   return response;
 }
