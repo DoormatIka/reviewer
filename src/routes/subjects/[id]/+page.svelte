@@ -11,6 +11,10 @@
   <h2 class="mb-10">Topics</h2>
 
   <div class="grid grid-cols-2 grid-rows-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+    {#if data.topics.length < 1}
+    <p class="flex justify-center p-5">Nothing yet.</p>
+    {/if}
+
     {#each data.topics as { name, description, thumbnail, topic_id, subject_id }}
       <Card>
         <img src={thumbnail} alt="" class=" max-h-64 md:max-h-32 object-contain" />

@@ -73,7 +73,7 @@
       <p class="font-semibold text-2xl text-center tracking-wider p-3">Made by <span class="text-teal-400">Alice</span></p>
     
       <div class="flex flex-col items-center pl-5 pr-5 justify-center border border-slate-200 flex-1 h-28">
-        <p class="font-semibold">Socials:</p>
+        <p class="font-semibold text-xl">Socials</p>
         <a href="https://twitter.com/LilynHana" target="_blank" rel="noopener noreferrer" class="text-lime-300 font-mono">Twitter</a>
       </div>
     </div>
