@@ -26,7 +26,7 @@ import SvelteMarkdown from "svelte-markdown"
     <!-- Image part -->
     {#if data.contents.length > 0}
       {#each [data.contents[index]] as { image } (index)}
-        <img src={image} alt="Custom" class="object-contain max-h-full self-center" />
+        <img src={image} alt="Custom" class="object-contain max-h-screen self-center" />
       {/each}
     {/if}
   </div>
