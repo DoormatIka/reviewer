@@ -16,7 +16,7 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter({
       edge: false,
-      split: true
+      split: false,
     }),
     paths: {
       base: ""
