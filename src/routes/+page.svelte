@@ -44,8 +44,7 @@
         <p>Frontend: SvelteKit, TailwindCSS, and HTML, CSS, JS. ;)</p>
         <p>Backend: Pocketbase (Lightweight database)</p>
         <p>Hosting Frontend: Netlify</p>
-        <p>Hosting Backend: Fly.io</p>
-        <p>Additional Tools: Docker (to make my code compatible with hosting services)</p>
+        <p>Hosting Backend: Pockethost :heart:</p>
       </div>
     </div>
   </div>
