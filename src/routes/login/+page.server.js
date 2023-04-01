@@ -3,11 +3,9 @@ import { redirect, fail } from "@sveltejs/kit"
 // if the user is already logged in, redirect them back.
 /** @type {import("@sveltejs/kit").ServerLoad} */
 export function load({ locals }) {
-  /*
   if (locals.pb.authStore.isValid) {
     throw redirect(303, "/");
   }
-  */
 }
 
 /** @type {import("@sveltejs/kit").Actions} */

@@ -25,7 +25,7 @@ const config = {
       mode: "auto",
       directives: {
         "font-src": ["self", "https://fonts.gstatic.com"],
-        "style-src": ["self", "https://fonts.googleapis.com"],
+        "style-src": ["self", "https://fonts.googleapis.com", "*"],
         "img-src": ["self", "media.discordapp.net", "https://reviewer-book.pockethost.io"],
         "default-src": ["self"],
       },
