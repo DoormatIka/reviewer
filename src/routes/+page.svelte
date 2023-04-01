@@ -2,6 +2,12 @@
   import { base } from "$app/paths";
   const logo =
     "https://media.discordapp.net/attachments/1061320413373808741/1085617532804812970/favicon.png?width=560&height=560";
+  
+  const socials = [
+    { name: "Twitter", link: "https://twitter.com/LilynHana" },
+    { name: "Github", link: "https://github.com/DoormatIka" },
+    { name: "YouTube", link: "https://www.youtube.com/channel/UCtAtFodHMODWTBfbquris5Q" }
+  ]
   export let data;
 </script>
 
@@ -65,16 +71,20 @@
     </div>
   {/if}
 
-  <div class="mt-5 flex items-center justify-between shadow-md gap-10 p-4 font-mono text-white bg-black">
-    <div class="w-40 h-40 relative before:absolute before:bg-teal-300 before:top-1 before:left-1 before:w-full before:h-full">
+  <div class="group mt-5 flex items-center justify-between shadow-md hover:shadow-lg shadow-teal-300 hover:shadow-teal-300 gap-10 p-6 font-mono text-white bg-black transition-all duration-1000">
+    <div class="w-40 h-40 relative before:absolute before:bg-teal-300 before:top-1 before:group-hover:top-2 before:left-1 before:group-hover:left-2 before:w-full before:h-full before:transition-all before:duration-150 before:ease-linear">
       <img src="akyuu.jpg" alt="" class="w-full h-full absolute inset-0 z-10 object-cover" />
     </div>
     <div>
       <p class="font-semibold text-2xl text-center tracking-wider p-3">Made by <span class="text-teal-400">Alice</span></p>
     
-      <div class="flex flex-col items-center pl-5 pr-5 justify-center border border-slate-200 flex-1 h-28">
+      <div class="flex flex-col items-center pl-5 pr-5 justify-center border border-slate-200 flex-1 p-3">
         <p class="font-semibold text-xl">Socials</p>
-        <a href="https://twitter.com/LilynHana" target="_blank" rel="noopener noreferrer" class="text-lime-300 font-mono">Twitter</a>
+        {#each socials as { name, link }}
+        <a href={link} class="text-emerald-400 group-hover:text-cyan-300 transition-all ease-linear duration-300 font-mono" target="_blank" rel="noopener noreferrer">
+          {name}
+        </a>
+        {/each}
       </div>
     </div>
   </div>
