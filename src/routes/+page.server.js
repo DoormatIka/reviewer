@@ -9,13 +9,11 @@ export async function load({ locals }) {
     return {
       code: hp.code,
       message: hp.message,
-      isLoggedIn: locals.pb.authStore.isValid
     }
   } catch (err) {
     return {
       code: -1,
       message: "API is down.",
-      isLoggedIn: locals.pb.authStore.isValid
     }
   }
 }

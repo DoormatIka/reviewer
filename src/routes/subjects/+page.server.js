@@ -18,7 +18,6 @@ export async function load({ locals }) {
           id: v.id
         }
     }),
-    isLoggedIn: locals.pb.authStore.isValid
   }
 }
 
