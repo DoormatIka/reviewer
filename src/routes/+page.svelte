@@ -71,7 +71,7 @@
     </div>
   {/if}
 
-  <div class="group mt-5 flex items-center justify-between shadow-md hover:shadow-lg shadow-teal-300 hover:shadow-teal-300 gap-10 p-6 font-mono text-white bg-black transition-all duration-1000">
+  <div class="group mt-5 flex items-center justify-between shadow-md hover:shadow-lg shadow-teal-300 hover:shadow-teal-300 gap-10 p-5 pl-9 pr-9 font-mono text-white bg-black transition-all duration-1000">
     <div class="w-40 h-40 relative before:absolute before:bg-teal-300 before:top-1 before:group-hover:top-2 before:left-1 before:group-hover:left-2 before:w-full before:h-full before:transition-all before:duration-150 before:ease-linear">
       <img src="akyuu.jpg" alt="" class="w-full h-full absolute inset-0 z-10 object-cover" />
     </div>
