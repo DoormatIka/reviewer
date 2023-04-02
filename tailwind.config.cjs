@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         "rubik": ["Rubik", "sans-serif"],
-        "quart": ["Quart", "sans-serif"]
+        "quart": ["Quart", "sans-serif"],
+        "IBM": ['IBM Plex Mono', "monospace"],
       },
       transitionTimingFunction: {
         "snap": "cubic-bezier(.3,.82,0,1.5)"
