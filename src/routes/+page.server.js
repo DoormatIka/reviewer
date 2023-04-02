@@ -1,4 +1,5 @@
 export const prerender = true;
+export const trailingSlash = 'always';
 
 /** @type {import("@sveltejs/kit").ServerLoad} */
 export async function load({ locals }) {

@@ -1,3 +1,4 @@
+export const ssr = true;
 import { fail, error } from "@sveltejs/kit"
 
 export async function load({ params, locals }) {

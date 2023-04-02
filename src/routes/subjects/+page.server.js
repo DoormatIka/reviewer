@@ -1,3 +1,4 @@
+export const ssr = true;
 import { redirect, fail } from "@sveltejs/kit"
 
 /** @type {import("@sveltejs/kit").ServerLoad} */

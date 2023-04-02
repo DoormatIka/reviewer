@@ -1,3 +1,4 @@
+export const ssr = true;
 import { fail, error } from "@sveltejs/kit"
 // process the request for a list of topics associated with a subject here
 
