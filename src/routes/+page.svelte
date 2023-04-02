@@ -71,15 +71,15 @@
     </div>
   {/if}
 
-  <div class="group mt-5 flex items-center justify-between shadow-md hover:shadow-lg shadow-teal-300 hover:shadow-teal-300 gap-10 p-5 pl-9 pr-9 font-mono text-white bg-black transition-all duration-1000">
-    <div class="w-40 h-40 relative before:absolute before:bg-teal-300 before:top-1 before:group-hover:top-2 before:left-1 before:group-hover:left-2 before:w-full before:h-full before:transition-all before:duration-150 before:ease-linear">
+  <div class="group mt-16 sm:mt-5 flex flex-col w-full sm:w-auto sm:flex-row items-center justify-between shadow-md hover:shadow-lg shadow-teal-300 hover:shadow-teal-300 gap-10 p-5 pl-9 pr-9 font-IBM text-white bg-black transition-all duration-500">
+    <div class=" w-52 h-52 sm:w-40 sm:h-40 relative before:absolute before:bg-teal-300 before:top-1 before:group-hover:top-2 before:left-1 before:group-hover:left-2 before:w-full before:h-full before:transition-all before:duration-150 before:ease-linear">
       <img src="akyuu.jpg" alt="" class="w-full h-full absolute inset-0 z-10 object-cover" />
     </div>
     <div>
-      <p class="font-semibold text-2xl text-center tracking-wider p-3">Made by <span class="text-teal-400">Alice</span></p>
+      <p class=" font-semibold text-2xl text-center tracking-wider p-3">Made by <span class="text-teal-400">Alice</span></p>
     
       <div class="flex flex-col items-center pl-5 pr-5 justify-center border border-slate-200 flex-1 p-3">
-        <p class="font-semibold text-xl">Socials</p>
+        <p class="text-xl">Socials</p>
         {#each socials as { name, link }}
         <a href={link} class="text-emerald-400 group-hover:text-cyan-300 transition-all ease-linear duration-300 font-mono" target="_blank" rel="noopener noreferrer">
           {name}
