@@ -73,7 +73,7 @@
 
   <div class="group mt-16 sm:mt-5 flex flex-col w-full sm:w-auto sm:flex-row items-center justify-between shadow-md hover:shadow-lg shadow-teal-300 hover:shadow-teal-300 gap-10 p-5 pl-9 pr-9 font-IBM text-white bg-black transition-all duration-500">
     <div class=" w-52 h-52 sm:w-40 sm:h-40 relative before:absolute before:bg-teal-300 before:top-1 before:group-hover:top-2 before:left-1 before:group-hover:left-2 before:w-full before:h-full before:transition-all before:duration-150 before:ease-linear">
-      <img src="akyuu.jpg" alt="" class="w-full h-full absolute inset-0 z-10 object-cover" />
+      <img loading="lazy" src="akyuu.jpg" alt="" class="w-full h-full absolute inset-0 z-10 object-cover" />
     </div>
     <div>
       <p class=" font-semibold text-2xl text-center tracking-wider p-3">Made by <span class="text-teal-400">Alice</span></p>
