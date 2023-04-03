@@ -15,7 +15,8 @@ html {
 
 body {
   background-color: #f8f8f8;
-  @apply font-rubik
+  @apply font-rubik;
+  font-display: swap;
 }
 
 h1 {
