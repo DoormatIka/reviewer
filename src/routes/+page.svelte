@@ -19,7 +19,7 @@
     "
   >
     <img
-      class=" sm:h-36 group-hover:-translate-y-3 group-hover:-translate-x-1 group-hover:-rotate-3 delay-75 transition-all duration-300 h-48 block mb-5 ease-snap"
+      class=" sm:h-36 sm:w-36 group-hover:-translate-y-3 group-hover:-translate-x-1 group-hover:-rotate-3 delay-75 transition-all duration-300 h-48 w-48 block mb-5 ease-snap"
       src={logo}
       alt="Logo Icon"
     />
