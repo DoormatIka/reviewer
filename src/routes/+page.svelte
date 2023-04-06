@@ -15,13 +15,13 @@
   <div
     class="group
       sm:flex sm:items-center sm:flex-col sm:gap-1
-      duration-150 p-7 shadow-md rounded-xl mt-10 bg-white
+      duration-150 p-7 shadow-md rounded-xl mt-10 bg-milk
       sm:max-w-2xl
     "
   >
     <img
-      class=" sm:h-36 sm:w-36 transition-all ease-out duration-200 h-48 w-48 block mb-5"
-      src={logo}
+      class=" sm:w-96 sm:h-96 transition-all ease-out duration-200 h-64 w-64 block mb-5"
+      src="USTLRes.png"
       alt="Logo Icon"
     />
     <div>
