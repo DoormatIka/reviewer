@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Rubik&display=swap');
 @font-face {
-  font-family: "Quart";
-  src: url("/assets/Quart-Regular.ttf")
+  font-family: "Hatton B";
+  src: url("/assets/PP Hatton Bold 700.otf")
 }
 
 @tailwind base;
@@ -14,27 +14,23 @@ html {
 }
 
 body {
-  background-color: #f8f8f8;
-  @apply font-rubik;
+  @apply font-rubik bg-milk text-midnight;
   font-display: swap;
 }
 
 h1 {
-  @apply font-quart text-4xl font-light
+  @apply font-hattonb text-4xl font-bold text-midnight
 }
 h2 {
-  @apply font-quart text-3xl font-light
+  @apply font-hattonb text-3xl font-light text-midnight
 }
 h3 {
-  @apply font-quart text-xl font-light
+  @apply font-hattonb text-xl font-light text-midnight
 }
 h4 {
-  @apply font-rubik text-2xl font-semibold
+  @apply font-rubik text-2xl font-bold text-midnight
 }
 
-.main-button {
-  @apply p-5 border border-blue-200 hover:border-blue-500 transition-colors duration-150 shadow-md rounded-md
-}
 
 button {
   @apply font-rubik text-blue-700

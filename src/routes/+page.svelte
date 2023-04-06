@@ -16,15 +16,16 @@
     class="group
       sm:flex sm:items-center sm:flex-col sm:gap-1
       duration-150 p-7 shadow-md rounded-xl mt-10 bg-white
+      sm:max-w-2xl
     "
   >
     <img
-      class=" sm:h-36 sm:w-36 group-hover:-translate-y-3 group-hover:-translate-x-1 group-hover:-rotate-3 delay-75 transition-all duration-300 h-48 w-48 block mb-5 ease-snap"
+      class=" sm:h-36 sm:w-36 transition-all ease-out duration-200 h-48 w-48 block mb-5"
       src={logo}
       alt="Logo Icon"
     />
     <div>
-      <h3 class="py-3">
+      <h2 class="py-3">
         A Grade 12 resource website for
         <span
           class="group-hover:text-yellow-400 inline-block group-hover:rotate-3 group-hover:translate-x-1 transition-all duration-200 ease-snap"
@@ -36,9 +37,9 @@
         >
           students.
         </span>
-      </h3>
-      <div class="p-2 text-xs text-slate-400">
-        <p class="mb-2">Technologies to use:</p>
+      </h2>
+      <div class="p-2 text-xs">
+        <p>Technologies used:</p>
         <p>Frontend: SvelteKit, TailwindCSS, and HTML, CSS, JS. ;)</p>
         <p>Backend: Pocketbase (Lightweight database)</p>
         <p>Hosting Frontend: Netlify</p>
