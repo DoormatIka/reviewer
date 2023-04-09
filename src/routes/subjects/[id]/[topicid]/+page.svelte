@@ -1,19 +1,21 @@
 <script>
   import { error } from "@sveltejs/kit";
-import SvelteMarkdown from "svelte-markdown"
+  import SvelteMarkdown from "svelte-markdown"
   import { fade } from 'svelte/transition';
   const logo = "https://media.discordapp.net/attachments/951405390560653373/1089801005245411338/IMG_6919.jpg";
   export let data;
   export let form;
   let value = "";
 
+  $: contents = data.contents;
+
   let index = 0;
   const next = () => {
-    index = (index + 1) % data.contents.length
+    index = (index + 1) % contents.length
   }
   const previous = () => {
     if (index <= 0) {
-      index = data.contents.length
+      index = contents.length
     }
     index = index - 1
     console.log(index)
@@ -24,8 +26,8 @@ import SvelteMarkdown from "svelte-markdown"
 <div class="overflow-y-hidden flex min-h-screen flex-col lg:flex-row">
   <div class=" overflow-y-hidden flex flex-auto lg:w-32 lg:h-auto p-3 justify-center flex-col lg:min-h-screen">
     <!-- Image part -->
-    {#if data.contents.length > 0}
-      {#each [data.contents[index]] as { image } (index)}
+    {#if contents.length > 0}
+      {#each [contents[index]] as { image } (index)}
         <img src={image} alt="Custom" class="object-contain max-h-screen self-center" />
       {/each}
     {/if}
@@ -33,8 +35,8 @@ import SvelteMarkdown from "svelte-markdown"
   <div class="flex-1 p-3 text-justify flex flex-col justify-between max-h-screen">
     <!-- Description -->
     <div class="overflow-y-auto text-lg lg:text-base">
-      {#if data.contents.length > 0}
-        {#each [data.contents[index]] as { description, id } (index)}
+      {#if contents.length > 0}
+        {#each [contents[index]] as { description, id } (index)}
           <SvelteMarkdown source={description}></SvelteMarkdown>
 
           {#if data.isLoggedIn}
@@ -63,7 +65,7 @@ import SvelteMarkdown from "svelte-markdown"
       {/if}
     </div>
     <div class="mt-2">
-      <p transition:fade>Page {index + 1} of {data.contents.length}</p>        
+      <p transition:fade>Page {index + 1} of {contents.length}</p>        
       <button on:click={previous}>Previous</button>
       <button on:click={next}>Next</button>
     </div>
